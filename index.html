@@ -1,0 +1,32 @@
+<html>
+<head>
+         <title> Motivational Msg App by Kamal Sir </title>
+         <style>
+                   * { font-size:60px; font-family: Calibri;)
+                     h2 { border:solid; width:70%; color:white }
+                     h1 { color: white;)
+                     body { background-image:url("im3.jpg"); background-size: 1200px 600px; }
+            </style>
+           <script>
+                   function gm()
+                   {
+                            event.preventDefault();
+                            let msg = document.getElementById("msg");
+                            let url = "https://in.images.search.yahoo.com/images/view;_ylt=Awrx_r164upl64wf5gW9HAx.;_ylu=c2VjA3NyBHNsawNpbWcEb2lkAzA2ZjBhOGYyODYzMjcxNDQzMTBlODE4ODFjMGVjZGIwBGdwb3MDMQRpdANiaW5n?back=https%3A%2F%2Fin.images.search.yahoo.com%2Fsearch%2Fimages%3Fp%3Dquots%2Blinks%26ei%3DUTF-8%26type%3DE211IN1589G0%26fr%3Dmcafee%26fr2%3Dp%253As%252Cv%253Ai%252Cm%253Asb-top%26tab%3Dorganic%26ri%3D1&w=960&h=539&imgurl=media.allauthor.com%2Fimages%2Fposter%2Flarge%2F1529163608644-the-weakest-link-in-a-chain-is-the-strongest-because-it-can-break-it.jpg&rurl=https%3A%2F%2Fallauthor.com%2Fquotes%2F64041%2F&size=417.7KB&p=quots+links&oid=06f0a8f286327144310e81881c0ecdb0&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&fr=mcafee&tt=The+weakest+link+in+a+chain+is+the+strongest...+-+Quote&b=0&ni=160&no=1&ts=&tab=organic&sigr=00IMMmfTAliW&sigb=TJ8yPNQqqUGS&sigi=x7sxjbfchBwO&sigt=qz2tvmzTt0ZB&.crumb=kmlyjwkqqhe&fr=mcafee&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&type=E211IN1589G0";
+                            fetch(url)
+                            .then(res =>res.json())
+                            .then(data => msg.innerHTML = data[0]["content"]"  + " -> " + data[0]["author"])
+                            .catch(err => msg.innerHTML = "issue err);
+                   } 
+           </script>
+</head>
+<body>
+<center>
+          <h1> Motivational Msg App </h1>
+          <form onsubmit="gm()">
+                    <input type="submit" value="Get Msg" />
+           </form>
+<h2 id = "msg" />
+</center>
+</body>
+</html>
